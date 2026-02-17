@@ -58,3 +58,14 @@ console.log(studentNames.lastIndexOf("Alice")); // returns 3, the index of the l
 console.log(studentNames.includes("Charlie")); // returns true, since "Charlie" is in the array
 //d
 console.log(studentNames.includes("Eve")); // returns false, since "Eve" is not in the array
+// Exercise 5: Advanced Search with Conditionals 
+const products = [
+    {id: 1, name: "Laptop", price: 1200},
+     {id: 2, name: "Mouse", price: 25}, 
+     {id: 3, name: "Keyboard", price: 75}
+    ];
+// a
+let foundProducts = products.find(product => product.id === 2); // finds the first product with id 2
+console.log(foundProducts);
+//b
+let foundIndex = products.findIndex(product => product.price > 1000); // finds the index of the first product with price greater than 1000
