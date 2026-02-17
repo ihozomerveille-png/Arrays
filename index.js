@@ -40,9 +40,21 @@ console.log("originalScores:", originalScores);
 console.log("referenceCopy:", referenceCopy);
 //d
 // To create a true copy of the array, we can use the spread operator or the slice method. This way, we can modify the new array without affecting the original one.
+// The spread operator creates a new array with the same elements, while the slice method returns a new array that is a shallow copy of a portion of the original array. Both methods allow us to avoid the reference trap and maintain the integrity of the original array.
 const spreadCopy = [...originalScores]; // creates a new array with the same elements
 //e
 spreadCopy[0] = 50;
 console.log("originalScores:", originalScores);
 console.log("spreadCopy:", spreadCopy);
-
+// Section B : Searching  and checking  (accessors and iterators)
+// Excercise 4 : finding elements by value and index
+const studentNames = ["Alice", "Bob", "Charlie", "Alice", "David"];
+// a 
+// the indexof, lastindexof = methods are used to find the index of the first and last occurrence of a specified value in an array, respectively. They return the index of the element if found, or -1 if not found.
+console.log(studentNames.indexOf("Alice")); // returns 0, the index of the first occurrence of "Alice"
+// b
+console.log(studentNames.lastIndexOf("Alice")); // returns 3, the index of the last occurrence of "Alice"
+// c
+console.log(studentNames.includes("Charlie")); // returns true, since "Charlie" is in the array
+//d
+console.log(studentNames.includes("Eve")); // returns false, since "Eve" is not in the array
